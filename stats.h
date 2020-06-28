@@ -9,32 +9,124 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c 
+ * @brief This program give you some tools
+ *         to analyze a data set
  *
- * <Add Extended Description Here>
+ * Here you should get some important parameters from the
+ * data set:
+ *  -maximum
+ *  -minimum
+ *  -mean
+ *  -median
+ * 
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Pool Diego Gonzales Loayza
+ * @date 26/06/2020 
  *
  */
+
 #ifndef __STATS_H__
 #define __STATS_H__
 
 /* Add Your Declarations and Function Comments here */ 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Show on screen some parameters from the data set
  *
- * <Add Extended Description Here>
+ * This function takes as an input a unsigned char pointer
+ * from the array and also an integer number. It will print
+ * the median, mean, maximum and minumum values from the
+ * given array
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param array    It's a pointer from the data set 
+ * @param size     It's the length of the data set
  *
- * @return <Add Return Informaiton here>
+ * @return The function returns nothing
  */
+void print_statistics(unsigned char *array, int size);
 
+/**
+ * @brief Show on screen all the values from the data set
+ *
+ * This function takes as an input a unsigned char pointer
+ * from the array and also an integer number. It will print
+ * all the values from the data set
+ *
+ * @param array    It's a pointer from the data set 
+ * @param size     It's the length of the data set
+ *
+ * @return The function returns nothing
+ */
+void print_array(unsigned char *array, int size);
+
+/**
+ * @brief Sort all the elements from the data set
+ *
+ * This function takes as an input a unsigned char pointer
+ * from the array and also an integer number. It will sort 
+ * all the elements from low to high
+ *
+ * @param array    It's a pointer from the data set 
+ * @param size     It's the length of the data set
+ *
+ * @return The function returns nothing
+ */
+void sort_array(unsigned char *array, int size);
+
+/**
+ * @brief Give the minimum value from the data set
+ *
+ * This function takes as an input a unsigned char pointer
+ * from the array. It will return
+ * the minimum value from the data set
+ *
+ * @param array    It's a pointer from the data set 
+ *
+ * @return The function return an unsigned char
+ */
+unsigned char find_minimum(unsigned char *array);
+
+/**
+ * @brief Give the maximum value from the data set
+ *
+ * This function takes as an input a unsigned char pointer
+ * from the array and also an integer number. It will return
+ * the maximum value from the data set
+ *
+ * @param array    It's a pointer from the data set 
+ * @param size     It's the length of the data set
+ *
+ * @return The function return an unsigned char
+ */
+unsigned char find_maximum(unsigned char *array, int size);
+ 
+/**
+ * @brief Give the mean value from the data set
+ *
+ * This function takes as an input a unsigned char pointer
+ * from the array and also an integer number. It will return
+ * the mean value from the data set
+ *
+ * @param array    It's a pointer from the data set 
+ * @param size     It's the length of the data set
+ *
+ * @return The function return a float number
+ */
+float find_mean(unsigned char *array, int size);
+
+/**
+ * @brief Give the median value from the data set
+ *
+ * This function takes as an input a unsigned char pointer
+ * from the array and also an integer number. It will return
+ * the median value from the data set
+ *
+ * @param array    It's a pointer from the data set 
+ * @param size     It's the length of the data set
+ *
+ * @return The function return an unsigned char
+ */
+unsigned char find_median(unsigned char *array, int size);
 
 #endif /* __STATS_H__ */
